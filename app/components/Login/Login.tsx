@@ -233,7 +233,6 @@ export default function Login() {
             size="md"
             mb="lg"
             loading={loginMutation.isPending}
-            style={{ animation: `${fadeIn} 1.4s ease-out` }}
           >
             {t("buttons.login")}
           </Button>

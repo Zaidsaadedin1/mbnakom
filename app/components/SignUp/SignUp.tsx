@@ -420,10 +420,7 @@ const SignUp = () => {
             fullWidth
             size="md"
             mt="xl"
-            gradient={{ from: "blue", to: "cyan" }}
-            variant="gradient"
             loading={registerMutation.isPending}
-            style={{ animation: `${fadeIn} 1.4s ease-out` }}
           >
             {t("buttons.create")}
           </Button>

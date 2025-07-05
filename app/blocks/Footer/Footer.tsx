@@ -19,9 +19,9 @@ import {
   IconMail,
   IconPhone,
   IconMapPin,
-  IconDental,
-  IconFlipFlops,
-  IconFaceId,
+  IconBuilding,
+  IconHammer,
+  IconTools,
 } from "@tabler/icons-react";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
@@ -40,31 +40,43 @@ const Footer = () => {
         direction={{ base: "column", md: "row" }}
         wrap="wrap"
       >
-        {/* Clinic Info */}
+        {/* Company Info */}
         <Stack gap="md" flex={1} maw={350}>
           <Group gap="sm">
-            <IconDental size={38} color="#50becc" />
+            <IconBuilding size={38} color="#f97316" />
             <Title order={3} c="dark">
-              {t("dr_majdoline_aldeek_clinic")}
+              {t("mbnakom_contracting")}
             </Title>
           </Group>
           <Text size="md" c="dimmed" fw={500}>
-            {t("clinic_title")}
+            {t("company_title")}
           </Text>
           <Text size="md" c="dimmed">
-            {t("clinic_description")}
+            {t("company_description")}
           </Text>
 
           {/* Specializations */}
           <Group gap="md">
-            <Badge variant="light" leftSection={<IconDental size={12} />}>
-              {t("cosmetic_dentistry")}
+            <Badge
+              variant="light"
+              color="orange"
+              leftSection={<IconBuilding size={12} />}
+            >
+              {t("residential_construction")}
             </Badge>
-            <Badge variant="light" leftSection={<IconFaceId size={12} />}>
-              {t("dermal_fillers")}
+            <Badge
+              variant="light"
+              color="orange"
+              leftSection={<IconHammer size={12} />}
+            >
+              {t("commercial_projects")}
             </Badge>
-            <Badge variant="light" leftSection={<IconFlipFlops size={12} />}>
-              {t("dental_botox")}
+            <Badge
+              variant="light"
+              color="orange"
+              leftSection={<IconTools size={12} />}
+            >
+              {t("infrastructure")}
             </Badge>
           </Group>
 
@@ -74,7 +86,7 @@ const Footer = () => {
               {t("follow_us")}
             </Text>
             <Anchor
-              href="https://www.instagram.com/dr.majdoline_aldeek?utm_source=ig_web_button_share_sheet&igsh=MWxtYWF5MTI2amhqag=="
+              href="https://www.instagram.com/mbnakom"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -84,7 +96,7 @@ const Footer = () => {
               </ActionIcon>
             </Anchor>
             <Anchor
-              href="https://www.facebook.com/profile.php?id=61565758469290&ref=_xav_ig_profile_page_web"
+              href="https://www.facebook.com/mbnakom"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -105,19 +117,19 @@ const Footer = () => {
             <List.Item>
               <Group gap="md" wrap="nowrap">
                 <IconMapPin size={16} />
-                <Text size="md">{t("clinic_address")}</Text>
+                <Text size="md">{t("company_address")}</Text>
               </Group>
             </List.Item>
             <List.Item>
               <Group gap="md" wrap="nowrap">
                 <IconPhone size={16} />
-                <Text size="md">{t("clinic_phone")}</Text>
+                <Text size="md">{t("company_phone")}</Text>
               </Group>
             </List.Item>
             <List.Item>
               <Group gap="smdm" wrap="nowrap">
                 <IconMail size={16} />
-                <Text size="md">{t("clinic_email")}</Text>
+                <Text size="md">{t("company_email")}</Text>
               </Group>
             </List.Item>
           </List>

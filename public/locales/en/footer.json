@@ -1,17 +1,17 @@
 {
-  "clinic_title": "Premium Dental & Aesthetic Clinic",
-  "clinic_description": "Specializing in cosmetic dentistry and facial aesthetic treatments for your perfect smile.",
-  "cosmetic_dentistry": "Cosmetic Dentistry",
-  "dermal_fillers": "Dermal Fillers",
-  "dental_botox": "Dental Botox",
+  "mbnakom_contracting": "Mbnakom Contracting",
+  "company_title": "Infrastructure & Masonry Specialists",
+  "company_description": "Professional construction services with a commitment to quality and safety",
+  "residential_construction": "Residential",
+  "commercial_projects": "Commercial",
+  "infrastructure": "Infrastructure",
   "follow_us_aria": "Follow us on social media",
   "follow_us": "Follow Us",
   "contact_information": "Contact Information",
-  "clinic_address": "main st - Deir Ibzei, Ramallah, Palestine",
-  "clinic_phone": "+970 592 599 015",
-  "clinic_email": "info@test.com",
-  "footer_copyright": "© 2025 Dr Majdoline Aldeek. All rights reserved.",
+  "company_address": "Amman jordan",
+  "company_phone": "+971 50 123 4567",
+  "company_email": "info@mbnakom.com",
+  "footer_copyright": "© 2024 Mbnakom Contracting. All Rights Reserved.",
   "made_with_love_by": "Made with ❤️ by",
-  "CodeMastersJo": "CodeMastersJo",
-  "dr_majdoline_aldeek_clinic": "Dr Majdoline Aldeek Clinic"
+  "CodeMastersJo": "CodeMastersJo"
 }

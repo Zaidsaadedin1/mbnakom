@@ -5,7 +5,7 @@ import { GetServerSideProps } from "next";
 import appointmentController from "../app/Apis/controllers/appointmentControllers";
 import { decodeToken } from "../app/utils/authDecode"; // use server-safe version
 import { parse } from "cookie";
-import DoctorDashboard from "../app/components/DoctorDashboard/DoctorDashboard";
+import AdminDashboard from "../app/components/AdminDashboard/AdminDashboard";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { locale, req } = context;
@@ -30,7 +30,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
       ...(await serverSideTranslations(locale || "ar", [
-        "doctorDashboard",
+        "adminDashboard",
         "menuComponent",
         "footer",
       ])),
@@ -40,4 +40,4 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 };
 
-export default DoctorDashboard;
+export default AdminDashboard;

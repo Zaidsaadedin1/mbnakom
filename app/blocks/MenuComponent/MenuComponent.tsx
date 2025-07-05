@@ -45,7 +45,7 @@ const MenuComponent = () => {
   const menuItems = [
     { path: "/services", icon: IconHammer, label: t("our_services") },
     { path: "/projects", icon: IconBuilding, label: t("our_projects") },
-    { path: "/contact", icon: IconPhoneCall, label: t("get_quote") },
+    { path: "/appointments", icon: IconPhoneCall, label: t("get_quote") },
     { path: "/about", icon: IconInfoCircle, label: t("about_us") },
   ];
 

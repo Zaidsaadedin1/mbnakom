@@ -15,10 +15,12 @@ import {
   Divider,
 } from "@mantine/core";
 import {
-  IconDental,
-  IconFaceId,
-  IconLinkPlus,
-  IconMassage,
+  IconBuildingStore,
+  IconToolsKitchen2,
+  IconHomeEco,
+  IconBath,
+  IconPaint,
+  IconHammer,
   IconClock,
   IconPhone,
   IconCalendar,
@@ -38,84 +40,84 @@ const ServicesPage = () => {
 
   const services = [
     {
-      id: "teeth-whitening",
-      icon: IconDental,
-      title: t("teeth_whitening_title"),
-      description: t("teeth_whitening_description"),
+      id: "kitchen-renovation",
+      icon: IconToolsKitchen2,
+      title: t("kitchen_renovation_title"),
+      description: t("kitchen_renovation_description"),
       features: [
-        t("teeth_whitening_feature_1"),
-        t("teeth_whitening_feature_2"),
-        t("teeth_whitening_feature_3"),
+        t("kitchen_renovation_feature_1"),
+        t("kitchen_renovation_feature_2"),
+        t("kitchen_renovation_feature_3"),
       ],
-      duration: t("teeth_whitening_duration"),
+      duration: t("kitchen_renovation_duration"),
     },
     {
-      id: "dental-botox",
-      icon: IconFaceId,
-      title: t("dental_botox_title"),
-      description: t("dental_botox_description"),
+      id: "bathroom-remodeling",
+      icon: IconBath,
+      title: t("bathroom_remodeling_title"),
+      description: t("bathroom_remodeling_description"),
       features: [
-        t("dental_botox_feature_1"),
-        t("dental_botox_feature_2"),
-        t("dental_botox_feature_3"),
+        t("bathroom_remodeling_feature_1"),
+        t("bathroom_remodeling_feature_2"),
+        t("bathroom_remodeling_feature_3"),
       ],
-      duration: t("dental_botox_duration"),
+      duration: t("bathroom_remodeling_duration"),
     },
     {
-      id: "facial-fillers",
-      icon: IconLinkPlus,
-      title: t("facial_fillers_title"),
-      description: t("facial_fillers_description"),
+      id: "interior-design",
+      icon: IconHomeEco,
+      title: t("interior_design_title"),
+      description: t("interior_design_description"),
       features: [
-        t("facial_fillers_feature_1"),
-        t("facial_fillers_feature_2"),
-        t("facial_fillers_feature_3"),
+        t("interior_design_feature_1"),
+        t("interior_design_feature_2"),
+        t("interior_design_feature_3"),
       ],
-      duration: t("facial_fillers_duration"),
+      duration: t("interior_design_duration"),
     },
     {
-      id: "veneers",
-      icon: IconDental,
-      title: t("veneers_title"),
-      description: t("veneers_description"),
+      id: "painting-services",
+      icon: IconPaint,
+      title: t("painting_services_title"),
+      description: t("painting_services_description"),
       features: [
-        t("veneers_feature_1"),
-        t("veneers_feature_2"),
-        t("veneers_feature_3"),
+        t("painting_services_feature_1"),
+        t("painting_services_feature_2"),
+        t("painting_services_feature_3"),
       ],
-      duration: t("veneers_duration"),
+      duration: t("painting_services_duration"),
     },
     {
-      id: "laser-treatments",
-      icon: IconMassage,
-      title: t("laser_treatments_title"),
-      description: t("laser_treatments_description"),
+      id: "commercial-renovation",
+      icon: IconBuildingStore,
+      title: t("commercial_renovation_title"),
+      description: t("commercial_renovation_description"),
       features: [
-        t("laser_treatments_feature_1"),
-        t("laser_treatments_feature_2"),
-        t("laser_treatments_feature_3"),
+        t("commercial_renovation_feature_1"),
+        t("commercial_renovation_feature_2"),
+        t("commercial_renovation_feature_3"),
       ],
-      duration: t("laser_treatments_duration"),
+      duration: t("commercial_renovation_duration"),
     },
     {
-      id: "dental-implants",
-      icon: IconDental,
-      title: t("dental_implants_title"),
-      description: t("dental_implants_description"),
+      id: "general-contracting",
+      icon: IconHammer,
+      title: t("general_contracting_title"),
+      description: t("general_contracting_description"),
       features: [
-        t("dental_implants_feature_1"),
-        t("dental_implants_feature_2"),
-        t("dental_implants_feature_3"),
+        t("general_contracting_feature_1"),
+        t("general_contracting_feature_2"),
+        t("general_contracting_feature_3"),
       ],
-      duration: t("dental_implants_duration"),
+      duration: t("general_contracting_duration"),
     },
   ];
 
   const emergencyServices = [
     {
       icon: IconEmergencyBed,
-      title: t("emergency_dental"),
-      description: t("emergency_dental_description"),
+      title: t("emergency_repairs"),
+      description: t("emergency_repairs_description"),
       contact: t("emergency_phone"),
     },
     {
@@ -126,9 +128,9 @@ const ServicesPage = () => {
     },
     {
       icon: IconHome,
-      title: t("home_visits"),
-      description: t("home_visits_description"),
-      contact: t("home_visits_contact"),
+      title: t("site_visits"),
+      description: t("site_visits_description"),
+      contact: t("site_visits_contact"),
     },
   ];
 
@@ -139,7 +141,7 @@ const ServicesPage = () => {
         <Paper p="xl" mb="xl" withBorder>
           <Stack align="center" gap="md">
             <ThemeIcon size={60} variant="light">
-              <IconDental size={30} />
+              <IconHammer size={30} />
             </ThemeIcon>
             <Title order={1} ta="center">
               {t("page_title")}
@@ -203,7 +205,7 @@ const ServicesPage = () => {
                           )
                         }
                       >
-                        {t("book_appointment")}
+                        {t("book_consultation")}
                       </Button>
                     </Stack>
                   </Card>
@@ -286,7 +288,7 @@ const ServicesPage = () => {
               <Grid.Col span={{ base: 12, md: 3 }}>
                 <Card p="md" ta="center" withBorder>
                   <ThemeIcon size={40} variant="light" mx="auto" mb="sm">
-                    <IconDental size={20} />
+                    <IconHammer size={20} />
                   </ThemeIcon>
                   <Text fw={600} mb="xs">
                     {t("step_3_title")}
@@ -299,7 +301,7 @@ const ServicesPage = () => {
               <Grid.Col span={{ base: 12, md: 3 }}>
                 <Card p="md" ta="center" withBorder>
                   <ThemeIcon size={40} variant="light" mx="auto" mb="sm">
-                    <IconFaceId size={20} />
+                    <IconHomeEco size={20} />
                   </ThemeIcon>
                   <Text fw={600} mb="xs">
                     {t("step_4_title")}
@@ -324,7 +326,7 @@ const ServicesPage = () => {
                   size="lg"
                   onClick={() => router.push(`/${currentLang}/appointments`)}
                 >
-                  {t("book_appointment")}
+                  {t("book_consultation")}
                 </Button>
                 <CallNowButton />
               </Group>

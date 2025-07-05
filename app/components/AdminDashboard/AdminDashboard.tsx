@@ -27,7 +27,7 @@ type DoctorDashboardProps = {
   loading?: boolean;
 };
 
-function DoctorDashboard({
+function AdminDashboard({
   users = [],
   appointments = [],
   loading = false,
@@ -293,4 +293,4 @@ function DoctorDashboard({
   );
 }
 
-export default DoctorDashboard;
+export default AdminDashboard;
