@@ -1,0 +1,147 @@
+{
+  "hero_title": "Building Your Vision with Quality Masonry",
+  "hero_subtitle": "Professional infrastructure and masonry services for residential and commercial projects",
+  "request_quote": "Request a Quote",
+
+  "stats_title": "Our Achievements in Numbers",
+  "stats_projects": "Completed Projects",
+  "stats_clients": "Satisfied Clients",
+  "stats_materials": "Material Types",
+  "stats_experience": "Years of Experience",
+
+  "about_badge": "About Us",
+  "about_title": "Trusted Masonry & Infrastructure Experts",
+  "about_description": "With over a decade of experience, we specialize in delivering high-quality masonry and infrastructure solutions tailored to your specific needs.",
+  "about_point_1": "Licensed and insured professionals",
+  "about_point_2": "Quality materials from trusted suppliers",
+  "about_point_3": "Modern construction techniques",
+  "about_point_4": "Timely project completion",
+  "learn_more": "Learn More",
+
+  "services_badge": "Our Services",
+  "services_title": "Comprehensive Masonry Solutions",
+  "services_subtitle": "From foundation to finish, we provide complete masonry and infrastructure services",
+
+  "service_1_title": "Residential Masonry",
+  "service_1_description": "Custom brickwork, stonework, and block construction for homes and residential properties.",
+  "service_1_duration": "Varies by project",
+
+  "service_2_title": "Commercial Infrastructure",
+  "service_2_description": "Durable masonry solutions for commercial buildings and public infrastructure projects.",
+  "service_2_duration": "Varies by project",
+
+  "service_3_title": "Retaining Walls",
+  "service_3_description": "Structural and decorative retaining walls for landscaping and erosion control.",
+  "service_3_duration": "2-4 weeks",
+
+  "service_4_title": "Concrete Work",
+  "service_4_description": "Professional concrete pouring, finishing, and repair services.",
+  "service_4_duration": "1-3 weeks",
+
+  "service_5_title": "Brick Restoration",
+  "service_5_description": "Historic preservation and restoration of brick structures.",
+  "service_5_duration": "Varies by project",
+
+  "service_6_title": "Foundation Work",
+  "service_6_description": "Solid and reliable foundation construction for all building types.",
+  "service_6_duration": "3-6 weeks",
+
+  "process_badge": "Our Process",
+  "process_title": "How We Build Your Project",
+  "process_subtitle": "A systematic approach to ensure quality and efficiency",
+
+  "process_1_title": "Initial Consultation",
+  "process_1_desc": "We discuss your project requirements, budget, and timeline.",
+
+  "process_2_title": "Design & Planning",
+  "process_2_desc": "Our team creates detailed plans and material specifications.",
+
+  "process_3_title": "Material Procurement",
+  "process_3_desc": "We source high-quality materials from trusted suppliers.",
+
+  "process_4_title": "Construction & Finishing",
+  "process_4_desc": "Skilled craftsmen execute the project with precision.",
+
+  "blog_badge": "Our Blog",
+  "blog_title": "Construction Insights",
+  "blog_subtitle": "Latest trends and tips in masonry and infrastructure",
+
+  "blog_1_title": "Modern Masonry Techniques for 2024",
+  "blog_1_excerpt": "Explore the latest advancements in masonry that improve durability and aesthetics.",
+  "blog_1_date": "May 15, 2024",
+  "blog_1_read_time": "5 min read",
+  "blog_1_category": "Techniques",
+
+  "blog_2_title": "Choosing the Right Materials for Your Project",
+  "blog_2_excerpt": "A guide to selecting the best bricks, stones, and concrete for different applications.",
+  "blog_2_date": "April 28, 2024",
+  "blog_2_read_time": "7 min read",
+  "blog_2_category": "Materials",
+
+  "blog_3_title": "Infrastructure Maintenance Tips",
+  "blog_3_excerpt": "How to properly maintain your masonry structures for long-term durability.",
+  "blog_3_date": "March 10, 2024",
+  "blog_3_read_time": "4 min read",
+  "blog_3_category": "Maintenance",
+
+  "faq_badge": "FAQs",
+  "faq_title": "Frequently Asked Questions",
+  "faq_subtitle": "Answers to common questions about our services",
+
+  "faq_1_question": "How long does a typical masonry project take?",
+  "faq_1_answer": "Project duration varies based on size and complexity. Small projects may take 1-2 weeks, while larger constructions can take several months.",
+
+  "faq_2_question": "What materials do you work with?",
+  "faq_2_answer": "We work with brick, stone, concrete blocks, poured concrete, and various masonry products from leading manufacturers.",
+
+  "faq_3_question": "Do you provide free estimates?",
+  "faq_3_answer": "Yes, we offer free, no-obligation estimates for all potential projects.",
+
+  "faq_4_question": "Are you licensed and insured?",
+  "faq_4_answer": "Absolutely. We are fully licensed, bonded, and insured for your protection.",
+
+  "faq_5_question": "What areas do you serve?",
+  "faq_5_answer": "We serve the entire region with our masonry and infrastructure services.",
+
+  "newsletter_title": "Stay Updated",
+  "newsletter_subtitle": "Subscribe to our newsletter for construction tips and special offers",
+  "subscribe": "Subscribe Now",
+
+  "final_cta_title": "Ready to Start Your Project?",
+  "final_cta_subtitle": "Contact us today for a free consultation and quote",
+  "get_quote": "Get a Quote",
+
+  "success_modal_title": "Thank You!",
+  "success_modal_message": "Your request has been submitted successfully. We'll contact you shortly.",
+  "success_modal_button": "Close",
+
+  "video_not_supported": "Your browser does not support the video tag",
+  "call_now": "Call Now",
+  "doctor_phone_number": "Call Center PhoneNumber",
+  "phone_number_copied": "Phone Number Copied",
+  "Copied": "Copied",
+  "contact_form_title": "Contact Us",
+  "form_name_label": "Name",
+  "form_name_placeholder": "Enter your name",
+  "form_email_label": "Email",
+  "form_email_placeholder": "Enter your email",
+  "form_phone_label": "Phone",
+  "form_phone_placeholder": "Enter your phone number",
+  "form_service_label": "Service",
+  "form_service_placeholder": "Select a service",
+  "form_message_label": "Message",
+  "form_message_placeholder": "Tell us about your needs",
+  "form_submit": "Send Message",
+  "service_individual": "Individual Therapy",
+  "service_couples": "Couples Therapy",
+  "service_family": "Family Therapy",
+  "service_group": "Group Therapy",
+  "sendRequests": {
+    "notifications": {
+      "success_title": "Message Sent",
+      "success_message": "Your message has been sent successfully.",
+      "error_title": "Error",
+      "error_message": "There was a problem sending your message. Please try again."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "unauthorized": {
+    "title": "Unauthorized | 401",
+    "login_button": "Login"
+  },
+  "select_language": "Select Language",
+  "English": "English",
+  "Arabic": "Arabic",
+  "dr_omar_asad": "Dr. Omar Asad"
+}

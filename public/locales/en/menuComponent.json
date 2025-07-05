@@ -1,0 +1,13 @@
+{
+  "menu": "Menu",
+  "account": "Account",
+  "sign_up": "Register",
+  "login": "Login",
+  "logout": "Logout",
+  "profile": "My Profile",
+  "contractor_dashboard": "Contractor Dashboard",
+  "our_services": "Our Services",
+  "our_projects": "Our Projects",
+  "get_quote": "Get a Quote",
+  "about_us": "About Us"
+}

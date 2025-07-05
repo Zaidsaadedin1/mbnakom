@@ -1,0 +1,120 @@
+{
+  "title": "أنشئ حسابك",
+  "subtitle": "انضم إلى شبكتنا المبتكرة واستمتع بتجارب مخصصة تناسب اهتماماتك",
+  "sections": {
+    "account": "معلومات الحساب",
+    "personal": "البيانات الشخصية"
+  },
+  "fields": {
+    "username": "اسم مستعار",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "phoneNumber": "رقم الهاتف",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "birthDate": "تاريخ الميلاد",
+    "location": "الموقع",
+    "occupation": "المهنة",
+    "bio": "نبذة عنك",
+    "interests": "الاهتمامات",
+    "referralSource": "كيف سمعت عنا؟"
+  },
+  "placeholders": {
+    "username": "اختر اسم مستخدم فريد",
+    "firstName": "اسمك الأول",
+    "lastName": "اسم عائلتك",
+    "email": "your@email.com",
+    "phoneNumber": "+1234567890",
+    "password": "أنشئ كلمة مرور قوية",
+    "confirmPassword": "أكد كلمة المرور",
+    "birthDate": "تاريخ الميلاد",
+    "location": "المدينة، الدولة",
+    "occupation": "ما هي مهنتك؟",
+    "bio": "حدثنا قليلاً عن نفسك",
+    "interests": "اختر اهتماماتك",
+    "referralSource": "اختر خياراً"
+  },
+  "interests": {
+    "technology": "التكنولوجيا",
+    "science": "العلوم",
+    "art": "الفنون والتصميم",
+    "sports": "الرياضة واللياقة",
+    "music": "الموسيقى",
+    "cooking": "الطبخ",
+    "travel": "السفر",
+    "books": "الكتب والأدب",
+    "finance": "التمويل والاستثمار",
+    "gaming": "الألعاب"
+  },
+  "referral": {
+    "search": "محرك بحث",
+    "social": "وسائل التواصل الاجتماعي",
+    "friend": "إحالة صديق",
+    "ad": "إعلان",
+    "blog": "مدونة أو مقالة",
+    "other": "أخرى"
+  },
+  "buttons": {
+    "create": "إنشاء حساب"
+  },
+  "login": {
+    "existingAccount": "لديك حساب بالفعل؟ سجل الدخول"
+  },
+  "terms": {
+    "agree": "أوافق على",
+    "termsOfService": "شروط الخدمة و",
+    "privacyPolicy": "سياسة الخصوصية"
+  },
+  "errors": {
+    "no_response": "لا يوجد استجابة من الخادم",
+    "request_failed": "فشل الطلب",
+    "unexpected": "حدث خطأ غير متوقع"
+  },
+  "validation": {
+    "username_min": "يجب أن يكون اسم المستخدم 3 أحرف على الأقل",
+    "username_max": "لا يمكن أن يتجاوز اسم المستخدم 20 حرفًا",
+    "username_regex": "يمكن أن يحتوي اسم المستخدم على أحرف وأرقام وشرطات سفلية فقط",
+    "email_required": "البريد الإلكتروني مطلوب",
+    "email_invalid": "عنوان البريد الإلكتروني غير صالح",
+    "password_required": "كلمة المرور مطلوبة",
+    "password_min": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل",
+    "password_uppercase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل",
+    "password_number": "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل",
+    "confirm_password_required": "تأكيد كلمة المرور مطلوب",
+    "first_name_required": "الاسم الأول مطلوب",
+    "last_name_required": "اسم العائلة مطلوب",
+    "phone_required": "رقم الهاتف مطلوب",
+    "phone_invalid": "يرجى إدخال رقم هاتف صحيح (10-15 رقمًا)",
+    "birth_date_required": "تاريخ الميلاد مطلوب",
+    "age_minimum": "يجب أن يكون عمرك 13 عامًا على الأقل للتسجيل",
+    "bio_max": "لا يمكن أن تتجاوز النبذة 300 حرف",
+    "terms_required": "يجب قبول الشروط والأحكام",
+    "passwords_match": "كلمتا المرور غير متطابقتين"
+  },
+  "notifications": {
+    "success_title": "تم التسجيل بنجاح",
+    "success_message": "تم إنشاء حسابك بنجاح. يمكنك الآن تسجيل الدخول.",
+    "error_title": "فشل التسجيل",
+    "error_generic": "تعذر إنشاء حسابك. يرجى المحاولة لاحقًا.",
+    "error_user_exists": "يوجد مستخدم بهذا البريد الإلكتروني أو اسم المستخدم بالفعل.",
+    "notifications.error_generic": "حدث خطأ. يرجى المحاولة مرة أخرى لاحقًا.",
+    "error_user_exists_invalid_registration_details_Something_is_missing": "تفاصيل التسجيل غير مكتملة  ."
+  },
+  "genders": {
+    "male": "ذكر",
+    "female": "أنثى",
+    "nonbinary": "غير ثنائي",
+    "transgender": "عابر جنسياً",
+    "genderqueer": "جندر كوير",
+    "agender": "عديم النوع",
+    "other": "أخرى",
+    "prefer_not_to_say": "أفضل عدم الإفصاح",
+    "fields": {
+      "gender": "الجنس"
+    },
+    "placeholders": {
+      "gender": "اختر جنسك"
+    }
+  }
+}

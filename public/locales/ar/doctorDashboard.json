@@ -1,0 +1,41 @@
+{
+  "stats": {
+    "totalUsers": "إجمالي المستخدمين",
+    "totalAppointments": "إجمالي المواعيد",
+    "upcomingAppointments": "المواعيد القادمة",
+    "newUsersThisMonth": "مستخدمين جدد هذا الشهر"
+  },
+  "users": {
+    "title": "المستخدمين",
+    "searchPlaceholder": "ابحث عن مستخدمين...",
+    "noUsers": "لا يوجد مستخدمين",
+    "fields": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "gender": "الجنس",
+      "birthDate": "تاريخ الميلاد",
+      "occupation": "المهنة"
+    }
+  },
+  "appointments": {
+    "title": "المواعيد",
+    "searchPlaceholder": "ابحث عن مواعيد...",
+    "noAppointments": "لا يوجد مواعيد",
+    "fields": {
+      "patient": "المريض",
+      "service": "الخدمة",
+      "date": "التاريخ",
+      "time": "الوقت",
+      "status": "الحالة",
+      "medicalHistory": "التاريخ الطبي"
+    }
+  },
+  "status": {
+    "pending": "قيد الانتظار",
+    "confirmed": "تم التأكيد",
+    "completed": "مكتمل",
+    "cancelled": "ملغى",
+    "noshow": "لم يحضر"
+  }
+}

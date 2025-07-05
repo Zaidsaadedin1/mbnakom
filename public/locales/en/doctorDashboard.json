@@ -1,0 +1,41 @@
+{
+  "stats": {
+    "totalUsers": "Total Users",
+    "totalAppointments": "Total Appointments",
+    "upcomingAppointments": "Upcoming Appointments",
+    "newUsersThisMonth": "New Users This Month"
+  },
+  "users": {
+    "title": "Users",
+    "searchPlaceholder": "Search users...",
+    "noUsers": "No users found",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "gender": "Gender",
+      "birthDate": "Birth Date",
+      "occupation": "Occupation"
+    }
+  },
+  "appointments": {
+    "title": "Appointments",
+    "searchPlaceholder": "Search appointments...",
+    "noAppointments": "No appointments found",
+    "fields": {
+      "patient": "Patient",
+      "service": "Service",
+      "date": "Date",
+      "time": "Time",
+      "status": "Status",
+      "medicalHistory": "Medical History"
+    }
+  },
+  "status": {
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "noshow": "No Show"
+  }
+}

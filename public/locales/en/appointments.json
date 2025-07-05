@@ -1,0 +1,81 @@
+{
+  "title": "Book Your Dental Consultation",
+  "subtitle": "Schedule an appointment with Dr. Majdoline Aldeek for personalized dental care",
+
+  "sections": {
+    "personal_info": "Personal Information",
+    "appointment_info": "Appointment Details"
+  },
+
+  "fields": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "serviceType": "Service Type",
+    "preferredDate": "Preferred Date",
+    "preferredTime": "Preferred Time",
+    "concerns": "Dental Concerns",
+    "medicalHistory": "Medical History"
+  },
+
+  "placeholders": {
+    "firstName": "Enter your first name",
+    "lastName": "Enter your last name",
+    "email": "Enter your email",
+    "phone": "Enter your phone number",
+    "serviceType": "Select a service",
+    "preferredDate": "Select a date",
+    "preferredTime": "Select a time",
+    "concerns": "Describe your dental concerns",
+    "medicalHistory": "Any relevant medical history"
+  },
+
+  "services": {
+    "teeth_whitening": "Teeth Whitening",
+    "dental_botox": "Dental Botox",
+    "veneers": "Porcelain Veneers",
+    "facial_fillers": "Facial Fillers",
+    "routine_checkup": "Routine Checkup",
+    "emergency": "Emergency Dental Care"
+  },
+
+  "times": {
+    "morning": "Morning (9AM-12PM)",
+    "afternoon": "Afternoon (1PM-5PM)",
+    "evening": "Evening (6PM-8PM)"
+  },
+
+  "validation": {
+    "firstName_required": "First name is required",
+    "lastName_required": "Last name is required",
+    "email_required": "Email is required",
+    "email_invalid": "Please enter a valid email",
+    "phone_required": "Phone number is required",
+    "phone_invalid": "Please enter a valid phone number",
+    "serviceType_required": "Service type is required",
+    "date_required": "Preferred date is required",
+    "time_required": "Preferred time is required",
+    "concerns_min": "Please describe your concerns (minimum 10 characters)",
+    "concerns_max": "Description is too long (maximum 1000 characters)",
+    "terms_required": "You must accept the terms and conditions"
+  },
+
+  "links": {
+    "agree": "I agree to the",
+    "terms": "Terms of Service",
+    "and": "and",
+    "privacy": "Privacy Policy"
+  },
+
+  "buttons": {
+    "submit": "Book Appointment"
+  },
+
+  "notifications": {
+    "success_title": "Appointment Booked",
+    "success_message": "Your consultation has been scheduled successfully",
+    "error_title": "Error",
+    "error_message": "Failed to book appointment. Please try again."
+  }
+}

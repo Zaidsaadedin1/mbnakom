@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "name": "Al-Mansoori Construction",
+    "title": "Infrastructure & Masonry Specialists",
+    "description": "With over 15 years of experience in delivering high-quality construction projects across the UAE, we specialize in residential, commercial, and infrastructure masonry works.",
+    "badges": {
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "infrastructure": "Infrastructure",
+      "licensed": "Licensed"
+    },
+    "imageAlt": "Construction team at work"
+  },
+  "certifications": {
+    "title": "Certifications & Qualifications",
+    "items": {
+      "masonry": {
+        "title": "Advanced Masonry Certification",
+        "institution": "UAE Construction Institute"
+      },
+      "concrete": {
+        "title": "Concrete Specialist",
+        "institution": "Gulf Construction Academy"
+      },
+      "safety": {
+        "title": "OSHA Safety Certification",
+        "institution": "International Safety Council"
+      },
+      "engineering": {
+        "title": "Structural Engineering Principles",
+        "institution": "Dubai Engineering College"
+      }
+    }
+  },
+  "history": {
+    "title": "Our History",
+    "milestones": {
+      "founded": {
+        "title": "Company Founding",
+        "location": "Dubai, UAE",
+        "year": "2008",
+        "description": "Established as a small masonry contractor with a focus on quality residential projects."
+      },
+      "expansion": {
+        "title": "Commercial Expansion",
+        "location": "Abu Dhabi, UAE",
+        "year": "2015",
+        "description": "Expanded operations to include large-scale commercial and infrastructure projects."
+      },
+      "innovation": {
+        "title": "Innovation in Construction",
+        "location": "Across UAE",
+        "year": "2020-Present",
+        "description": "Implemented modern construction techniques and sustainable building practices."
+      }
+    }
+  },
+  "services": {
+    "title": "Core Services",
+    "items": {
+      "residential": {
+        "title": "Residential Masonry",
+        "description": "Custom home construction, stonework, brickwork, and complete residential masonry solutions."
+      },
+      "commercial": {
+        "title": "Commercial Construction",
+        "description": "Office buildings, retail spaces, and commercial complex masonry works."
+      },
+      "infrastructure": {
+        "title": "Infrastructure Projects",
+        "description": "Bridges, retaining walls, and public works masonry construction."
+      },
+      "restoration": {
+        "title": "Historic Restoration",
+        "description": "Preservation and restoration of traditional masonry structures."
+      }
+    }
+  },
+  "commitment": {
+    "title": "Safety & Quality Commitment",
+    "paragraph1": "At Al-Mansoori Construction, we prioritize safety and quality in every project. Our rigorous standards ensure durable structures that stand the test of time while protecting our workers and clients.",
+    "safety": {
+      "title": "Safety Standards",
+      "item1": "100% OSHA-compliant worksites",
+      "item2": "Regular safety training for all employees",
+      "item3": "Daily site safety inspections"
+    },
+    "quality": {
+      "title": "Quality Assurance",
+      "item1": "Premium materials from trusted suppliers",
+      "item2": "Multi-stage quality control process",
+      "item3": "10-year structural warranty on all projects"
+    }
+  }
+}

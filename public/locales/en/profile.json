@@ -1,0 +1,76 @@
+{
+  "title": "Profile",
+  "fields": {
+    "username": "Username",
+    "email": "Email",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "birthDate": "Birth Date",
+    "phoneNumber": "Phone Number",
+    "bio": "Bio",
+    "occupation": "Occupation",
+    "location": "Location",
+    "interests": "Interests"
+  },
+  "genders": {
+    "fields": {
+      "gender": "Gender"
+    },
+    "placeholders": {
+      "gender": "Select gender"
+    },
+    "male": "Male",
+    "female": "Female",
+    "nonbinary": "Non-binary",
+    "transgender": "Transgender",
+    "genderqueer": "Genderqueer",
+    "agender": "Agender",
+    "other": "Other",
+    "prefer_not_to_say": "Prefer not to say"
+  },
+  "placeholders": {
+    "interests": "Add interests separated by commas"
+  },
+  "buttons": {
+    "edit": "Save Changes"
+  },
+  "appointments": {
+    "title": "Your Appointments"
+  },
+  "table": {
+    "id": "ID",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "serviceType": "Service Type",
+    "preferredDate": "Preferred Date",
+    "preferredTime": "Preferred Time",
+    "concerns": "Concerns",
+    "status": "Status",
+    "no_appointments": "No appointments found"
+  },
+  "validation": {
+    "user_Name_required": "Username is required",
+    "first_name_required": "First name is required",
+    "last_name_required": "Last name is required",
+    "phone_required": "Phone number is required",
+    "phone_invalid": "Phone number is invalid",
+    "gender_required": "Gender is required",
+    "birth_date_required": "Birth date is required",
+    "age_minimum": "You must be at least 13 years old"
+  },
+  "notifications": {
+    "success_title": "Success",
+    "error_title": "Error",
+    "profile_updated": "Profile updated successfully",
+    "error_updating_profile": "Error updating profile"
+  },
+  "status": {
+    "Pending": "Pending",
+    "Confirmed": "Confirmed",
+    "Completed": "Completed",
+    "Cancelled": "Cancelled",
+    "NoShow": "No Show"
+  }
+}

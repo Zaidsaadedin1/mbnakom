@@ -1,0 +1,119 @@
+{
+  "title": "Create Your Account",
+  "subtitle": "Join our innovative network and unlock personalized experiences tailored to your interests",
+  "sections": {
+    "account": "Account Information",
+    "personal": "Personal Details"
+  },
+  "fields": {
+    "username": "Username",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "birthDate": "Birth Date",
+    "location": "Location",
+    "occupation": "Occupation",
+    "bio": "Bio",
+    "interests": "Interests",
+    "referralSource": "How did you hear about us?"
+  },
+  "placeholders": {
+    "username": "Choose a unique username",
+    "firstName": "Your first name",
+    "lastName": "Your last name",
+    "email": "your@email.com",
+    "phoneNumber": "+1234567890",
+    "password": "Create a strong password",
+    "confirmPassword": "Confirm your password",
+    "birthDate": "Birth date",
+    "location": "City, Country",
+    "occupation": "What do you do?",
+    "bio": "Tell us a bit about yourself",
+    "interests": "Select your interests",
+    "referralSource": "Select an option"
+  },
+  "interests": {
+    "technology": "Technology",
+    "science": "Science",
+    "art": "Art & Design",
+    "sports": "Sports & Fitness",
+    "music": "Music",
+    "cooking": "Cooking",
+    "travel": "Travel",
+    "books": "Books & Literature",
+    "finance": "Finance & Investment",
+    "gaming": "Gaming"
+  },
+  "referral": {
+    "search": "Search Engine",
+    "social": "Social Media",
+    "friend": "Friend Referral",
+    "ad": "Advertisement",
+    "blog": "Blog or Article",
+    "other": "Other"
+  },
+  "buttons": {
+    "create": "Create Account"
+  },
+  "login": {
+    "existingAccount": "Already have an account? Log in"
+  },
+  "terms": {
+    "agree": "I agree to the",
+    "termsOfService": "Terms of Service and",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "errors": {
+    "no_response": "No response from server",
+    "request_failed": "Request failed",
+    "unexpected": "Unexpected error occurred"
+  },
+  "validation": {
+    "username_min": "Username must be at least 3 characters",
+    "username_max": "Username cannot exceed 20 characters",
+    "username_regex": "Username can only contain letters, numbers, and underscores",
+    "email_required": "Email is required",
+    "email_invalid": "Invalid email address",
+    "password_required": "Password is required",
+    "password_min": "Password must be at least 8 characters",
+    "password_uppercase": "Password must include at least one uppercase letter",
+    "password_number": "Password must include at least one number",
+    "confirm_password_required": "Confirm password is required",
+    "first_name_required": "First name is required",
+    "last_name_required": "Last name is required",
+    "phone_required": "Phone number is required",
+    "phone_invalid": "Please enter a valid phone number (10-15 digits)",
+    "birth_date_required": "Birth date is required",
+    "age_minimum": "You must be at least 13 years old to sign up",
+    "bio_max": "Bio cannot exceed 300 characters",
+    "terms_required": "You must accept the terms and conditions",
+    "passwords_match": "Passwords don't match"
+  },
+  "notifications": {
+    "success_title": "Registration Successful",
+    "success_message": "Your account has been created successfully. You can now log in.",
+    "error_title": "Registration Failed",
+    "error_generic": "Unable to create your account. Please try again later.",
+    "error_user_exists": "A user with this email or username already exists.",
+    "error_user_exists_invalid_registration_details_Something_is_missing": "Invalid registration details, Something is missing."
+  },
+  "genders": {
+    "male": "Male",
+    "female": "Female",
+    "nonbinary": "Non-binary",
+    "transgender": "Transgender",
+    "genderqueer": "Genderqueer",
+    "agender": "Agender",
+    "other": "Other",
+    "prefer_not_to_say": "Prefer not to say",
+    "fields": {
+      "gender": "Gender"
+    },
+    "placeholders": {
+      "gender": "Select your gender"
+    }
+  }
+}
