@@ -6,7 +6,7 @@ import SignUp from "../app/components/SignUp/SignUp";
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? "en", [
+      ...(await serverSideTranslations(locale ?? "ar", [
         "signUp",
         "menuComponent",
         "footer",

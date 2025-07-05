@@ -6,7 +6,7 @@ import ServicesPage from "../app/components/ServicesPage/ServicesPage";
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? "en", [
+      ...(await serverSideTranslations(locale ?? "ar", [
         "services",
         "menuComponent",
         "footer",

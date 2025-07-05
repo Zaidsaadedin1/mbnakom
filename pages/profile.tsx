@@ -21,7 +21,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const user = (await userController.getUserById(authCheck.user?.id)).data;
   return {
     props: {
-      ...(await serverSideTranslations(locale || "en", [
+      ...(await serverSideTranslations(locale || "ar", [
         "profile",
         "menuComponent",
         "footer",

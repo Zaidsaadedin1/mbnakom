@@ -29,7 +29,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   console.log(users, appointments);
   return {
     props: {
-      ...(await serverSideTranslations(locale || "en", [
+      ...(await serverSideTranslations(locale || "ar", [
         "doctorDashboard",
         "menuComponent",
         "footer",

@@ -16,7 +16,7 @@ export function middleware(req: NextRequest) {
 
   // Only redirect if locale is 'default'
   if (locale === "default") {
-    const cookieLocale = req.cookies.get("NEXT_LOCALE")?.value || "en";
+    const cookieLocale = req.cookies.get("NEXT_LOCALE")?.value || "ar";
 
     return NextResponse.redirect(
       new URL(`/${cookieLocale}${pathname}${search}`, req.url)

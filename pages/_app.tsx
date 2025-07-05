@@ -31,7 +31,7 @@ function App({
 
   useEffect(() => {
     document.documentElement.dir = dir;
-    document.documentElement.lang = router.locale ?? "en";
+    document.documentElement.lang = router.locale ?? "ar";
   }, [dir, router.locale]);
 
   const queryClient = new QueryClient();
@@ -42,7 +42,7 @@ function App({
       <AuthProvider>
         <QueryClientProvider client={queryClient}>
           <Head>
-            <title>Dr Majdoline Aldeek</title>
+            <title>MBNAKOM</title>
             <meta
               name="viewport"
               content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"

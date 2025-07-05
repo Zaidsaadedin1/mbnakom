@@ -131,7 +131,7 @@ const Footer = () => {
       </Text>
       <Divider my="xl" />
       <Flex
-        onClick={() => router.push("https://www.codemastersjo.com/en/")}
+        onClick={() => router.push("https://www.codemastersjo.com/ar/")}
         justify="center"
         align="center"
         gap="xs"

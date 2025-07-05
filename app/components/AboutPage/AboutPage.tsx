@@ -37,7 +37,7 @@ const AboutPage = () => {
   return (
     <Box>
       {/* Hero Banner */}
-      <BackgroundImage src="/images/construction-banner.jpg" radius={0} h={400}>
+      <BackgroundImage src="/images/about_image.jpg" radius={0} h={400}>
         <Overlay color="#000" opacity={0.4} zIndex={1} />
         <Container size="lg" h="100%">
           <Stack
@@ -65,11 +65,11 @@ const AboutPage = () => {
                 <Badge
                   key={index}
                   variant="light"
-                  color="gray"
+                  color="orange"
                   size="lg"
-                  leftSection={<item.icon size={16} />}
+                  leftSection={<item.icon size={30} />}
                 >
-                  {item.label}
+                  <Text color="white">{item.label}</Text>
                 </Badge>
               ))}
             </Group>
@@ -83,7 +83,7 @@ const AboutPage = () => {
         <Grid gutter="xl" mb={rem(80)}>
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Image
-              src="/images/construction-team.jpg"
+              src="/images/about_image2.jpg"
               alt={t("about.imageAlt")}
               radius="md"
               height={400}

@@ -6,7 +6,7 @@ import consultation from "../app/components/RequestService/RequestService";
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? "en", [
+      ...(await serverSideTranslations(locale ?? "ar", [
         "appointments",
         "menuComponent",
         "footer",

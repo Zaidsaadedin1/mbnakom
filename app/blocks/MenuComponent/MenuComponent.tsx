@@ -73,20 +73,22 @@ const MenuComponent = () => {
         >
           {/* Logo - Always visible */}
           <Image
-            src={
-              isDark
-                ? "/images/construction-logo-white.png"
-                : "/images/construction-logo-dark.png"
-            }
+            src={"images/transperent-logo.png"}
             alt="Logo"
-            width={140}
+            width={80}
+            height={80}
             onClick={() => router.push(`/${currentLang}/`)}
             style={{ cursor: "pointer" }}
           />
 
           {/* Desktop Navigation - Hidden on mobile */}
           {!isMobile && (
-            <Group gap="xl" style={{ flexGrow: 1, justifyContent: "center" }}>
+            <Group
+              justify="center"
+              gap="xl"
+              ml={isRTL ? "0" : "150px"}
+              mr={isRTL ? "150px" : "0"}
+            >
               {menuItems.map((item) => (
                 <Button
                   key={item.path}
