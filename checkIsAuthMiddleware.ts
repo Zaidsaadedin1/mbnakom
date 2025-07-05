@@ -12,8 +12,11 @@ export const checkAuth = async (context: GetServerSidePropsContext) => {
       return acc;
     }, {} as Record<string, string>) || {};
 
-  const token = cookies.token || req.headers.authorization?.split(" ")[1];
+  // Look for mbnakomToken instead of token
+  const token =
+    cookies.mbnakomToken || req.headers.authorization?.split(" ")[1];
 
+  console.log("Token found:", token); // Better logging
   if (!token) {
     return { authenticated: false, user: null };
   }

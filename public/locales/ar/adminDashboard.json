@@ -7,35 +7,40 @@
   },
   "users": {
     "title": "المستخدمين",
-    "searchPlaceholder": "ابحث عن مستخدمين...",
+    "searchPlaceholder": "بحث المستخدمين...",
     "noUsers": "لا يوجد مستخدمين",
     "fields": {
       "name": "الاسم",
       "email": "البريد الإلكتروني",
       "phone": "الهاتف",
-      "gender": "الجنس",
-      "birthDate": "تاريخ الميلاد",
-      "occupation": "المهنة"
+      "createdAt": "تاريخ الإنشاء"
     }
   },
   "appointments": {
     "title": "المواعيد",
-    "searchPlaceholder": "ابحث عن مواعيد...",
+    "searchPlaceholder": "بحث المواعيد...",
     "noAppointments": "لا يوجد مواعيد",
+    "viewDetails": "عرض التفاصيل",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "detailsTitle": "تفاصيل الموعد",
     "fields": {
-      "patient": "المريض",
+      "client": "العميل",
       "service": "الخدمة",
+      "propertyType": "نوع العقار",
       "date": "التاريخ",
       "time": "الوقت",
       "status": "الحالة",
-      "medicalHistory": "التاريخ الطبي"
+      "actions": "الإجراءات",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "projectDetails": "تفاصيل المشروع",
+      "createdAt": "تاريخ الإنشاء"
     }
   },
   "status": {
-    "pending": "قيد الانتظار",
-    "confirmed": "تم التأكيد",
-    "completed": "مكتمل",
-    "cancelled": "ملغى",
-    "noshow": "لم يحضر"
+    "Pending": "قيد الانتظار",
+    "Confirmed": "مؤكد",
+    "Cancelled": "ملغى"
   }
 }

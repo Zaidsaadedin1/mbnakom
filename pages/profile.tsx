@@ -7,7 +7,7 @@ import i18nConfig from "../next-i18next.config";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { locale } = context;
-
+  console.log(context);
   const authCheck = await checkAuth(context);
 
   if (!authCheck.authenticated) {

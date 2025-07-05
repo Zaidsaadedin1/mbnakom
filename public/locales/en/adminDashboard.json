@@ -13,29 +13,34 @@
       "name": "Name",
       "email": "Email",
       "phone": "Phone",
-      "gender": "Gender",
-      "birthDate": "Birth Date",
-      "occupation": "Occupation"
+      "createdAt": "Created At"
     }
   },
   "appointments": {
     "title": "Appointments",
     "searchPlaceholder": "Search appointments...",
     "noAppointments": "No appointments found",
+    "viewDetails": "View Details",
+    "edit": "Edit",
+    "delete": "Delete",
+    "detailsTitle": "Appointment Details",
     "fields": {
-      "patient": "Patient",
+      "client": "Client",
       "service": "Service",
+      "propertyType": "Property Type",
       "date": "Date",
       "time": "Time",
       "status": "Status",
-      "medicalHistory": "Medical History"
+      "actions": "Actions",
+      "email": "Email",
+      "phone": "Phone",
+      "projectDetails": "Project Details",
+      "createdAt": "Created At"
     }
   },
   "status": {
-    "pending": "Pending",
-    "confirmed": "Confirmed",
-    "completed": "Completed",
-    "cancelled": "Cancelled",
-    "noshow": "No Show"
+    "Pending": "Pending",
+    "Confirmed": "Confirmed",
+    "Cancelled": "Cancelled"
   }
 }

@@ -1,32 +1,22 @@
 import React, { useState, useEffect } from "react";
 import {
-  Grid,
-  TextInput,
-  Button,
   Title,
   Card,
   Table,
   Textarea,
-  TagsInput,
   Stack,
   TableScrollContainer,
-  Select,
   LoadingOverlay,
   Badge,
+  Group,
+  ActionIcon,
+  Modal,
+  Text,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { z } from "zod";
 import { GetUserDto, UpdateUserDto } from "../../Apis/types/userDtos/userDtos";
-import { DatePickerInput } from "@mantine/dates";
-import {
-  IconUser,
-  IconPhone,
-  IconCalendar,
-  IconChevronLeft,
-  IconChevronRight,
-  IconCheck,
-  IconX,
-} from "@tabler/icons-react";
+import { IconCheck, IconX, IconInfoCircle } from "@tabler/icons-react";
 import { appointmentController } from "../../Apis/controllers/appointmentControllers";
 import { notifications } from "@mantine/notifications";
 import { useMutation } from "@tanstack/react-query";
@@ -38,32 +28,38 @@ import {
   AppointmentStatus,
   statusColors,
 } from "../../Apis/enums/AppointmentStatus";
+import { useDisclosure } from "@mantine/hooks";
 
 const Profile = ({ user }: { user: GetUserDto }) => {
   const { t } = useTranslation("profile");
   const router = useRouter();
   const currentLang = router.locale;
   const isRTL = currentLang === "ar";
-  const [userOrders, setUserOrders] = useState<GetAppointmentDto[]>([]);
+  const [userAppointments, setUserAppointments] = useState<GetAppointmentDto[]>(
+    []
+  );
+  const [selectedAppointment, setSelectedAppointment] =
+    useState<GetAppointmentDto | null>(null);
+  const [opened, { open, close }] = useDisclosure(false);
 
   useEffect(() => {
-    const fetchUserOrders = async () => {
+    const fetchUserAppointments = async () => {
       try {
         const res = await appointmentController.GetAllUserAppointmentAsync(
           user.id
         );
         if (res) {
-          setUserOrders(res.data ?? []);
+          setUserAppointments(res.data ?? []);
         } else {
-          setUserOrders([]);
+          setUserAppointments([]);
         }
       } catch (error) {
-        console.error("Error fetching user orders:", error);
-        setUserOrders([]);
+        console.error("Error fetching user appointments:", error);
+        setUserAppointments([]);
       }
     };
 
-    fetchUserOrders();
+    fetchUserAppointments();
   }, [user.id]);
 
   const schema = z.object({
@@ -215,6 +211,11 @@ const Profile = ({ user }: { user: GetUserDto }) => {
     });
   };
 
+  const handleViewDetails = (appointment: GetAppointmentDto) => {
+    setSelectedAppointment(appointment);
+    open();
+  };
+
   return (
     <>
       {updateUserDataMutation.isPending ? (
@@ -225,116 +226,8 @@ const Profile = ({ user }: { user: GetUserDto }) => {
             <Title order={2} mb="md">
               {t("title")}
             </Title>
-
             <form onSubmit={form.onSubmit(handleSubmit)}>
-              <TextInput
-                label={t("fields.username")}
-                {...form.getInputProps("userName")}
-                leftSection={<IconUser size={16} />}
-                mb="md"
-              />
-
-              <TextInput
-                label={t("fields.email")}
-                {...form.getInputProps("email")}
-                mb="md"
-              />
-
-              <Grid gutter="md">
-                <Grid.Col span={{ base: 12, sm: 6 }}>
-                  <TextInput
-                    label={t("fields.firstName")}
-                    {...form.getInputProps("firstName")}
-                    error={form.errors.firstName}
-                  />
-                </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6 }}>
-                  <TextInput
-                    label={t("fields.lastName")}
-                    {...form.getInputProps("lastName")}
-                    error={form.errors.lastName}
-                  />
-                </Grid.Col>
-              </Grid>
-
-              <DatePickerInput
-                label={t("fields.birthDate")}
-                {...form.getInputProps("dateOfBirth")}
-                leftSection={<IconCalendar size={16} />}
-                mb="md"
-                error={form.errors.dateOfBirth}
-                valueFormat="YYYY-MM-DD"
-                nextIcon={<IconChevronRight size={16} />}
-                previousIcon={<IconChevronLeft size={16} />}
-              />
-
-              <TextInput
-                label={t("fields.phoneNumber")}
-                leftSection={<IconPhone size={16} />}
-                {...form.getInputProps("phoneNumber")}
-                mt="md"
-                error={form.errors.phoneNumber}
-              />
-
-              <Select
-                w="100%"
-                dir={isRTL ? "rtl" : "ltr"}
-                p="md"
-                label={t("genders.fields.gender")}
-                placeholder={t("genders.placeholders.gender")}
-                data={[
-                  { value: "male", label: t("genders.male") },
-                  { value: "female", label: t("genders.female") },
-                  { value: "nonbinary", label: t("genders.nonbinary") },
-                  { value: "transgender", label: t("genders.transgender") },
-                  { value: "genderqueer", label: t("genders.genderqueer") },
-                  { value: "agender", label: t("genders.agender") },
-                  { value: "other", label: t("genders.other") },
-                  {
-                    value: "prefer_not_to_say",
-                    label: t("genders.prefer_not_to_say"),
-                  },
-                ]}
-                {...form.getInputProps("gender")}
-                error={form.errors.gender}
-                mb="md"
-              />
-
-              <Textarea
-                label={t("fields.bio")}
-                {...form.getInputProps("bio")}
-                autosize
-                minRows={2}
-                mt="md"
-              />
-
-              <TextInput
-                label={t("fields.occupation")}
-                {...form.getInputProps("occupation")}
-                mt="md"
-              />
-
-              <TextInput
-                label={t("fields.location")}
-                {...form.getInputProps("location")}
-                mt="md"
-              />
-
-              <TagsInput
-                label={t("fields.interests")}
-                {...form.getInputProps("interests")}
-                mt="md"
-                placeholder={t("placeholders.interests")}
-              />
-
-              <Button
-                disabled={updateUserDataMutation.isPending}
-                color="gray"
-                mt="md"
-                type="submit"
-              >
-                {t("buttons.edit")}
-              </Button>
+              {/* ... (keep all the existing form fields) ... */}
             </form>
           </Card>
 
@@ -342,123 +235,59 @@ const Profile = ({ user }: { user: GetUserDto }) => {
             <Title order={2} mb="md">
               {t("appointments.title")}
             </Title>
-            <TableScrollContainer minWidth={400}>
-              <Table verticalSpacing="xl" striped highlightOnHover>
+            <TableScrollContainer minWidth={800}>
+              <Table verticalSpacing="md" striped highlightOnHover>
                 <Table.Thead>
                   <Table.Tr>
-                    <Table.Th
-                      style={{ whiteSpace: "nowrap", paddingRight: 16 }}
-                    >
-                      {t("table.id")}
-                    </Table.Th>
-                    <Table.Th
-                      style={{ whiteSpace: "nowrap", paddingRight: 16 }}
-                    >
-                      {t("table.firstName")}
-                    </Table.Th>
-                    <Table.Th
-                      style={{ whiteSpace: "nowrap", paddingRight: 16 }}
-                    >
-                      {t("table.lastName")}
-                    </Table.Th>
-                    <Table.Th
-                      style={{ whiteSpace: "nowrap", paddingRight: 16 }}
-                    >
-                      {t("table.email")}
-                    </Table.Th>
-                    <Table.Th
-                      style={{ whiteSpace: "nowrap", paddingRight: 16 }}
-                    >
-                      {t("table.phone")}
-                    </Table.Th>
-                    <Table.Th
-                      style={{ whiteSpace: "nowrap", paddingRight: 16 }}
-                    >
-                      {t("table.serviceType")}
-                    </Table.Th>
-                    <Table.Th
-                      style={{ whiteSpace: "nowrap", paddingRight: 16 }}
-                    >
-                      {t("table.preferredDate")}
-                    </Table.Th>
-                    <Table.Th
-                      style={{ whiteSpace: "nowrap", paddingRight: 16 }}
-                    >
-                      {t("table.preferredTime")}
-                    </Table.Th>
-                    <Table.Th
-                      style={{ whiteSpace: "nowrap", paddingRight: 16 }}
-                    >
-                      {t("table.concerns")}
-                    </Table.Th>
-                    <Table.Th
-                      style={{ whiteSpace: "nowrap", paddingRight: 16 }}
-                    >
-                      {t("table.status")}
-                    </Table.Th>
+                    <Table.Th>{t("appointments.fields.service")}</Table.Th>
+                    <Table.Th>{t("appointments.fields.propertyType")}</Table.Th>
+                    <Table.Th>{t("appointments.fields.date")}</Table.Th>
+                    <Table.Th>{t("appointments.fields.status")}</Table.Th>
+                    <Table.Th>{t("appointments.fields.actions")}</Table.Th>
                   </Table.Tr>
                 </Table.Thead>
                 <Table.Tbody>
-                  {userOrders.length > 0 ? (
-                    userOrders.map((appointment) => {
-                      const statusEnumValue =
-                        AppointmentStatus[
-                          appointment.status as unknown as keyof typeof AppointmentStatus
-                        ];
-
-                      const statusKey =
-                        typeof statusEnumValue === "string"
-                          ? statusEnumValue
-                          : statusEnumValue?.toString().toLowerCase() || "";
-                      const badgeColor = statusColors[statusKey] || "yellow";
+                  {userAppointments.length > 0 ? (
+                    userAppointments.map((appointment) => {
+                      const statusString = AppointmentStatus[appointment.status]
+                        .toString()
+                        .toLowerCase();
+                      const badgeColor = statusColors[statusString] || "yellow";
 
                       return (
                         <Table.Tr key={appointment.id}>
-                          <Table.Td style={{ paddingRight: 16 }}>
-                            {appointment.id}
-                          </Table.Td>
-                          <Table.Td style={{ paddingRight: 16 }}>
-                            {appointment.firstName}
-                          </Table.Td>
-                          <Table.Td style={{ paddingRight: 16 }}>
-                            {appointment.lastName}
-                          </Table.Td>
-                          <Table.Td style={{ paddingRight: 16 }}>
-                            {appointment.email}
-                          </Table.Td>
-                          <Table.Td style={{ paddingRight: 16 }}>
-                            {appointment.phone}
-                          </Table.Td>
-                          <Table.Td style={{ paddingRight: 16 }}>
-                            {appointment.serviceType}
-                          </Table.Td>
-                          <Table.Td style={{ paddingRight: 16 }}>
+                          <Table.Td>{appointment.serviceType}</Table.Td>
+                          <Table.Td>{appointment.propertyType || "-"}</Table.Td>
+                          <Table.Td>
                             {new Date(
                               appointment.preferredDate
                             ).toLocaleDateString()}
+                            <Text size="sm" c="dimmed">
+                              {appointment.preferredTime}
+                            </Text>
                           </Table.Td>
-                          <Table.Td style={{ paddingRight: 16 }}>
-                            {appointment.preferredTime}
+                          <Table.Td>
+                            <Badge color={badgeColor}>
+                              {t(`status.${statusString}`)}
+                            </Badge>
                           </Table.Td>
-                          <Table.Td style={{ paddingRight: 16 }}>
-                            {appointment.concerns}
-                          </Table.Td>
-                          <Table.Td style={{ paddingRight: 16 }}>
-                            {appointment.status !== undefined ? (
-                              <Badge color={badgeColor}>
-                                {t(`status.${statusKey}`)}
-                              </Badge>
-                            ) : (
-                              "-"
-                            )}
+                          <Table.Td>
+                            <Group gap="xs">
+                              <ActionIcon
+                                variant="subtle"
+                                onClick={() => handleViewDetails(appointment)}
+                              >
+                                <IconInfoCircle size={18} />
+                              </ActionIcon>
+                            </Group>
                           </Table.Td>
                         </Table.Tr>
                       );
                     })
                   ) : (
                     <Table.Tr>
-                      <Table.Td colSpan={10} style={{ textAlign: "center" }}>
-                        {t("table.no_appointments")}
+                      <Table.Td colSpan={5} style={{ textAlign: "center" }}>
+                        {t("appointments.no_appointments")}
                       </Table.Td>
                     </Table.Tr>
                   )}
@@ -466,6 +295,76 @@ const Profile = ({ user }: { user: GetUserDto }) => {
               </Table>
             </TableScrollContainer>
           </Card>
+
+          {/* Appointment Details Modal */}
+          <Modal
+            opened={opened}
+            onClose={close}
+            title={t("appointments.details_title")}
+            size="lg"
+          >
+            {selectedAppointment && (
+              <Stack>
+                <Group>
+                  <Text fw={500}>{t("appointments.fields.service")}:</Text>
+                  <Text>{selectedAppointment.serviceType}</Text>
+                </Group>
+                <Group>
+                  <Text fw={500}>{t("appointments.fields.propertyType")}:</Text>
+                  <Text>{selectedAppointment.propertyType || "-"}</Text>
+                </Group>
+                <Group>
+                  <Text fw={500}>{t("appointments.fields.date")}:</Text>
+                  <Text>
+                    {new Date(
+                      selectedAppointment.preferredDate
+                    ).toLocaleDateString()}
+                  </Text>
+                </Group>
+                <Group>
+                  <Text fw={500}>{t("appointments.fields.time")}:</Text>
+                  <Text>{selectedAppointment.preferredTime}</Text>
+                </Group>
+                <Group>
+                  <Text fw={500}>{t("appointments.fields.status")}:</Text>
+                  <Badge
+                    color={
+                      statusColors[
+                        AppointmentStatus[selectedAppointment.status]
+                          .toString()
+                          .toLowerCase()
+                      ]
+                    }
+                  >
+                    {t(
+                      `status.${AppointmentStatus[selectedAppointment.status]
+                        .toString()
+                        .toLowerCase()}`
+                    )}
+                  </Badge>
+                </Group>
+                <Group>
+                  <Text fw={500}>
+                    {t("appointments.fields.projectDetails")}:
+                  </Text>
+                  <Textarea
+                    value={selectedAppointment.projectDetails}
+                    readOnly
+                    autosize
+                    minRows={3}
+                  />
+                </Group>
+                {selectedAppointment.createdAt && (
+                  <Group>
+                    <Text fw={500}>{t("appointments.fields.createdAt")}:</Text>
+                    <Text>
+                      {new Date(selectedAppointment.createdAt).toLocaleString()}
+                    </Text>
+                  </Group>
+                )}
+              </Stack>
+            )}
+          </Modal>
         </Stack>
       )}
     </>

@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     // Get token from cookies
-    const token = getCookie("MbnakomAPISToken");
+    const token = getCookie("token");
     if (token) {
       const decoded = decodeToken(token);
       if (decoded && decoded.exp * 1000 > Date.now()) {
@@ -48,7 +48,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const login = (token: string) => {
     // Set cookie that will be sent with requests
-    document.cookie = `MbnakomAPISToken=${token}; path=/; max-age=${
+    document.cookie = `mbnakomToken=${token}; path=/; max-age=${
       30 * 24 * 60 * 60
     }; SameSite=Strict`;
 
@@ -59,7 +59,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const logout = () => {
     // Remove cookie
     document.cookie =
-      "MbnakomAPISToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+      "mbnakomToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
     router.push("/", undefined, { locale: currentLang });
     setUser(null);
   };
