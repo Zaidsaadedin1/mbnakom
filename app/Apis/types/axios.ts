@@ -1,8 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie"; // Use js-cookie for client-side cookies
 
-const baseURL =
-  "https://dr-majdoline-aldeek-apis-production.up.railway.app/api";
+const baseURL = "https://mbnakomapis-production.up.railway.app/api";
 //const baseURL = "http://localhost:5209/api";
 
 const axiosInstance = axios.create({
@@ -15,7 +14,7 @@ const axiosInstance = axios.create({
 // Add a request interceptor to include auth token
 axiosInstance.interceptors.request.use(
   (config) => {
-    const token = Cookies.get("token"); // Get the token from client-side cookies
+    const token = Cookies.get("MbnakomAPISToken"); // Get the token from client-side cookies
     if (token) {
       config.headers.Authorization = `Bearer ${token}`; // Attach the token in the Authorization header
     }

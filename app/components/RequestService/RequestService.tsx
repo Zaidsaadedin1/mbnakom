@@ -14,7 +14,7 @@ import {
 } from "@mantine/core";
 import { z } from "zod";
 import { useForm } from "@mantine/form";
-import { IconUser, IconMail, IconCalendar } from "@tabler/icons-react";
+import { IconUser, IconMail, IconHome, IconTools } from "@tabler/icons-react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { keyframes } from "@emotion/react";
@@ -56,11 +56,11 @@ export default function ConsultationForm() {
     preferredTime: z
       .string()
       .min(1, { message: t("validation.time_required") }),
-    concerns: z
+    projectDetails: z
       .string()
-      .min(10, { message: t("validation.concerns_min") })
-      .max(1000, { message: t("validation.concerns_max") }),
-    medicalHistory: z.string().optional(),
+      .min(10, { message: t("validation.projectDetails_min") })
+      .max(1000, { message: t("validation.projectDetails_max") }),
+    propertyType: z.string().optional(),
     termsAccepted: z.boolean().refine((value) => value === true, {
       message: t("validation.terms_required"),
     }),
@@ -76,8 +76,8 @@ export default function ConsultationForm() {
       serviceType: "",
       preferredDate: "",
       preferredTime: "",
-      concerns: "",
-      medicalHistory: "",
+      projectDetails: "",
+      propertyType: "",
       termsAccepted: false,
     },
     validate: (values) => {
@@ -126,8 +126,8 @@ export default function ConsultationForm() {
         router.push(`/${currentLang}/`);
       } else {
         showNotification({
-          title: t("sendRequests.notifications.error_title"),
-          message: res.message || t("sendRequests.notifications.error_message"),
+          title: t("notifications.error_title"),
+          message: res.message || t("notifications.error_message"),
           color: "red",
           autoClose: 2000,
         });
@@ -142,12 +142,23 @@ export default function ConsultationForm() {
   };
 
   const serviceOptions = [
-    { value: "teeth_whitening", label: t("services.teeth_whitening") },
-    { value: "dental_botox", label: t("services.dental_botox") },
-    { value: "veneers", label: t("services.veneers") },
-    { value: "facial_fillers", label: t("services.facial_fillers") },
-    { value: "routine_checkup", label: t("services.routine_checkup") },
-    { value: "emergency", label: t("services.emergency") },
+    { value: "kitchen_renovation", label: t("services.kitchen_renovation") },
+    { value: "bathroom_remodeling", label: t("services.bathroom_remodeling") },
+    { value: "interior_design", label: t("services.interior_design") },
+    { value: "painting_services", label: t("services.painting_services") },
+    {
+      value: "commercial_renovation",
+      label: t("services.commercial_renovation"),
+    },
+    { value: "general_contracting", label: t("services.general_contracting") },
+  ];
+
+  const propertyOptions = [
+    { value: "apartment", label: t("propertyTypes.apartment") },
+    { value: "villa", label: t("propertyTypes.villa") },
+    { value: "office", label: t("propertyTypes.office") },
+    { value: "commercial", label: t("propertyTypes.commercial") },
+    { value: "other", label: t("propertyTypes.other") },
   ];
 
   const timeOptions = [
@@ -238,7 +249,7 @@ export default function ConsultationForm() {
         </Grid>
 
         <Divider
-          label={t("sections.appointment_info")}
+          label={t("sections.project_info")}
           labelPosition="center"
           mt="xl"
           mb="md"
@@ -253,10 +264,23 @@ export default function ConsultationForm() {
               mb="md"
               required
               {...form.getInputProps("serviceType")}
-              leftSection={<IconCalendar size={16} />}
+              leftSection={<IconTools size={16} />}
             />
           </Grid.Col>
-          <Grid.Col span={{ base: 12, md: 3 }}>
+          <Grid.Col span={{ base: 12, md: 6 }}>
+            <Select
+              label={t("fields.propertyType")}
+              placeholder={t("placeholders.propertyType")}
+              data={propertyOptions}
+              mb="md"
+              {...form.getInputProps("propertyType")}
+              leftSection={<IconHome size={16} />}
+            />
+          </Grid.Col>
+        </Grid>
+
+        <Grid>
+          <Grid.Col span={{ base: 12, md: 6 }}>
             <TextInput
               type="date"
               label={t("fields.preferredDate")}
@@ -265,7 +289,7 @@ export default function ConsultationForm() {
               {...form.getInputProps("preferredDate")}
             />
           </Grid.Col>
-          <Grid.Col span={{ base: 12, md: 3 }}>
+          <Grid.Col span={{ base: 12, md: 6 }}>
             <Select
               label={t("fields.preferredTime")}
               placeholder={t("placeholders.preferredTime")}
@@ -278,20 +302,12 @@ export default function ConsultationForm() {
         </Grid>
 
         <Textarea
-          label={t("fields.concerns")}
-          placeholder={t("placeholders.concerns")}
+          label={t("fields.projectDetails")}
+          placeholder={t("placeholders.projectDetails")}
           minRows={4}
           mb="md"
           required
-          {...form.getInputProps("concerns")}
-        />
-
-        <Textarea
-          label={t("fields.medicalHistory")}
-          placeholder={t("placeholders.medicalHistory")}
-          minRows={2}
-          mb="md"
-          {...form.getInputProps("medicalHistory")}
+          {...form.getInputProps("projectDetails")}
         />
 
         <Checkbox

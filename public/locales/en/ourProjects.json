@@ -1,0 +1,44 @@
+{
+  "page_title": "Our Portfolio",
+  "page_description": "Explore our completed projects showcasing Mbnakom's excellence in home renovation and interior design",
+
+  "project_types": {
+    "residential": "Residential",
+    "commercial": "Commercial"
+  },
+
+  "projects": {
+    "villa_renovation": {
+      "title": "Luxury Villa Transformation",
+      "description": "Complete renovation of a 5-bedroom villa including structural changes, interior design, and landscaping",
+      "duration": "4 months",
+      "tags": ["Full Renovation", "Interior Design", "Landscaping"]
+    },
+    "kitchen_makeover": {
+      "title": "Modern Kitchen Makeover",
+      "description": "Contemporary kitchen redesign with custom cabinetry and premium appliances",
+      "duration": "3 weeks",
+      "tags": ["Cabinetry", "Countertops", "Lighting"]
+    },
+    "office_redesign": {
+      "title": "Corporate Office Redesign",
+      "description": "Complete office space transformation to enhance productivity and brand identity",
+      "duration": "6 weeks",
+      "tags": ["Space Planning", "Acoustics", "Brand Integration"]
+    },
+    "bathroom_transformation": {
+      "title": "Spa Bathroom Transformation",
+      "description": "Luxury bathroom remodel with high-end fixtures and custom tiling",
+      "duration": "2 weeks",
+      "tags": ["Tiling", "Plumbing", "Ventilation"]
+    }
+  },
+
+  "view_project": "View Project Details",
+
+  "cta": {
+    "title": "Ready to Start Your Project?",
+    "description": "Contact us today for a free consultation and estimate",
+    "button": "Get in Touch"
+  }
+}

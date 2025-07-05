@@ -7,10 +7,10 @@ export interface CreateAppointmentDto {
   email: string;
   phone: string;
   serviceType: string;
+  propertyType?: string;
   preferredDate: string;
   preferredTime: string;
-  concerns: string;
-  medicalHistory?: string;
+  projectDetails: string;
   termsAccepted: boolean;
 }
 
@@ -21,10 +21,10 @@ export interface GetAppointmentDto {
   email: string;
   phone: string;
   serviceType: string;
+  propertyType?: string;
   preferredDate: string;
   preferredTime: string;
-  concerns: string;
-  medicalHistory?: string;
+  projectDetails: string;
   termsAccepted: boolean;
   userId?: string;
   status: AppointmentStatus;
@@ -41,10 +41,10 @@ export interface GetAppointmentForAdminDto {
   email: string;
   phone: string;
   serviceType: string;
+  propertyType?: string;
   preferredDate: string;
   preferredTime: string;
-  concerns: string;
-  medicalHistory?: string;
+  projectDetails: string;
   termsAccepted: boolean;
   status: AppointmentStatus;
   createdAt: string;

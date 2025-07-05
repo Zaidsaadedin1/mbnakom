@@ -1,49 +1,57 @@
 {
-  "title": "Book Your Dental Consultation",
-  "subtitle": "Schedule an appointment with Dr. Majdoline Aldeek for personalized dental care",
+  "title": "Request a Free Consultation",
+  "subtitle": "Fill out the form below to schedule your free home renovation consultation with Mbnakom experts",
 
   "sections": {
     "personal_info": "Personal Information",
-    "appointment_info": "Appointment Details"
+    "project_info": "Project Information"
   },
 
   "fields": {
     "firstName": "First Name",
     "lastName": "Last Name",
-    "email": "Email",
     "phone": "Phone Number",
+    "email": "Email Address",
     "serviceType": "Service Type",
+    "propertyType": "Property Type",
     "preferredDate": "Preferred Date",
     "preferredTime": "Preferred Time",
-    "concerns": "Dental Concerns",
-    "medicalHistory": "Medical History"
+    "projectDetails": "Project Details"
   },
 
   "placeholders": {
     "firstName": "Enter your first name",
     "lastName": "Enter your last name",
-    "email": "Enter your email",
     "phone": "Enter your phone number",
-    "serviceType": "Select a service",
-    "preferredDate": "Select a date",
-    "preferredTime": "Select a time",
-    "concerns": "Describe your dental concerns",
-    "medicalHistory": "Any relevant medical history"
+    "email": "Enter your email address",
+    "serviceType": "Select service type",
+    "propertyType": "Select property type",
+    "preferredDate": "Select preferred date",
+    "preferredTime": "Select preferred time",
+    "projectDetails": "Describe your project in detail"
   },
 
   "services": {
-    "teeth_whitening": "Teeth Whitening",
-    "dental_botox": "Dental Botox",
-    "veneers": "Porcelain Veneers",
-    "facial_fillers": "Facial Fillers",
-    "routine_checkup": "Routine Checkup",
-    "emergency": "Emergency Dental Care"
+    "kitchen_renovation": "Kitchen Renovation",
+    "bathroom_remodeling": "Bathroom Remodeling",
+    "interior_design": "Interior Design",
+    "painting_services": "Painting Services",
+    "commercial_renovation": "Commercial Renovation",
+    "general_contracting": "General Contracting"
+  },
+
+  "propertyTypes": {
+    "apartment": "Apartment",
+    "villa": "Villa",
+    "office": "Office",
+    "commercial": "Commercial Space",
+    "other": "Other"
   },
 
   "times": {
-    "morning": "Morning (9AM-12PM)",
-    "afternoon": "Afternoon (1PM-5PM)",
-    "evening": "Evening (6PM-8PM)"
+    "morning": "Morning (9AM - 12PM)",
+    "afternoon": "Afternoon (12PM - 4PM)",
+    "evening": "Evening (4PM - 7PM)"
   },
 
   "validation": {
@@ -56,8 +64,8 @@
     "serviceType_required": "Service type is required",
     "date_required": "Preferred date is required",
     "time_required": "Preferred time is required",
-    "concerns_min": "Please describe your concerns (minimum 10 characters)",
-    "concerns_max": "Description is too long (maximum 1000 characters)",
+    "projectDetails_min": "Project details should be at least 10 characters",
+    "projectDetails_max": "Project details should not exceed 1000 characters",
     "terms_required": "You must accept the terms and conditions"
   },
 
@@ -69,13 +77,13 @@
   },
 
   "buttons": {
-    "submit": "Book Appointment"
+    "submit": "Request Consultation"
   },
 
   "notifications": {
-    "success_title": "Appointment Booked",
-    "success_message": "Your consultation has been scheduled successfully",
+    "success_title": "Request Submitted",
+    "success_message": "Your consultation request has been received. We'll contact you shortly.",
     "error_title": "Error",
-    "error_message": "Failed to book appointment. Please try again."
+    "error_message": "There was an error submitting your request. Please try again."
   }
 }

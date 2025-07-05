@@ -1,64 +1,72 @@
 {
-  "title": "حجز موعد استشارة أسنان",
-  "subtitle": "حدد موعدًا مع الدكتورة مجدولين الديك للحصول على رعاية أسنان شخصية",
+  "title": "طلب استشارة مجانية",
+  "subtitle": "املأ النموذج أدناه لجدولة استشارة الترميم المنزلي المجانية مع خبراء مكانكم",
 
   "sections": {
     "personal_info": "المعلومات الشخصية",
-    "appointment_info": "تفاصيل الموعد"
+    "project_info": "معلومات المشروع"
   },
 
   "fields": {
     "firstName": "الاسم الأول",
     "lastName": "الاسم الأخير",
-    "email": "البريد الإلكتروني",
     "phone": "رقم الهاتف",
+    "email": "البريد الإلكتروني",
     "serviceType": "نوع الخدمة",
+    "propertyType": "نوع العقار",
     "preferredDate": "التاريخ المفضل",
     "preferredTime": "الوقت المفضل",
-    "concerns": "المشاكل السنية",
-    "medicalHistory": "التاريخ الطبي"
+    "projectDetails": "تفاصيل المشروع"
   },
 
   "placeholders": {
     "firstName": "أدخل اسمك الأول",
     "lastName": "أدخل اسمك الأخير",
-    "email": "أدخل بريدك الإلكتروني",
     "phone": "أدخل رقم هاتفك",
-    "serviceType": "اختر الخدمة",
-    "preferredDate": "اختر التاريخ",
-    "preferredTime": "اختر الوقت",
-    "concerns": "صف مشاكل الأسنان التي تعاني منها",
-    "medicalHistory": "أي تاريخ طبي ذو صلة"
+    "email": "أدخل بريدك الإلكتروني",
+    "serviceType": "اختر نوع الخدمة",
+    "propertyType": "اختر نوع العقار",
+    "preferredDate": "اختر التاريخ المفضل",
+    "preferredTime": "اختر الوقت المفضل",
+    "projectDetails": "صف مشروعك بالتفصيل"
   },
 
   "services": {
-    "teeth_whitening": "تبييض الأسنان",
-    "dental_botox": "بوتوكس الأسنان",
-    "veneers": "قشور خزفية",
-    "facial_fillers": "حشوات الوجه",
-    "routine_checkup": "فحص روتيني",
-    "emergency": "رعاية طارئة للأسنان"
+    "kitchen_renovation": "ترميم المطابخ",
+    "bathroom_remodeling": "تجديد الحمامات",
+    "interior_design": "التصميم الداخلي",
+    "painting_services": "خدمات الدهان",
+    "commercial_renovation": "ترميم تجاري",
+    "general_contracting": "مقاول عام"
+  },
+
+  "propertyTypes": {
+    "apartment": "شقة",
+    "villa": "فيلا",
+    "office": "مكتب",
+    "commercial": "مساحة تجارية",
+    "other": "أخرى"
   },
 
   "times": {
-    "morning": "الصباح (9 صباحًا - 12 ظهرًا)",
-    "afternoon": "بعد الظهر (1 ظهرًا - 5 مساءً)",
-    "evening": "المساء (6 مساءً - 8 مساءً)"
+    "morning": "الصباح (9 ص - 12 م)",
+    "afternoon": "بعد الظهر (12 م - 4 م)",
+    "evening": "المساء (4 م - 7 م)"
   },
 
   "validation": {
     "firstName_required": "الاسم الأول مطلوب",
     "lastName_required": "الاسم الأخير مطلوب",
     "email_required": "البريد الإلكتروني مطلوب",
-    "email_invalid": "الرجاء إدخال بريد إلكتروني صالح",
+    "email_invalid": "الرجاء إدخال بريد إلكتروني صحيح",
     "phone_required": "رقم الهاتف مطلوب",
-    "phone_invalid": "الرجاء إدخال رقم هاتف صالح",
+    "phone_invalid": "الرجاء إدخال رقم هاتف صحيح",
     "serviceType_required": "نوع الخدمة مطلوب",
     "date_required": "التاريخ المفضل مطلوب",
     "time_required": "الوقت المفضل مطلوب",
-    "concerns_min": "الرجاء وصف مشاكلك (10 أحرف على الأقل)",
-    "concerns_max": "الوصف طويل جدًا (1000 حرف كحد أقصى)",
-    "terms_required": "يجب عليك الموافقة على الشروط والأحكام"
+    "projectDetails_min": "يجب أن تكون تفاصيل المشروع 10 أحرف على الأقل",
+    "projectDetails_max": "يجب ألا تتجاوز تفاصيل المشروع 1000 حرف",
+    "terms_required": "يجب الموافقة على الشروط والأحكام"
   },
 
   "links": {
@@ -69,13 +77,13 @@
   },
 
   "buttons": {
-    "submit": "حجز الموعد"
+    "submit": "طلب استشارة"
   },
 
   "notifications": {
-    "success_title": "تم حجز الموعد",
-    "success_message": "تم جدولة استشارتك بنجاح",
+    "success_title": "تم إرسال الطلب",
+    "success_message": "تم استلام طلب الاستشارة الخاص بك. سنتواصل معك قريبًا.",
     "error_title": "خطأ",
-    "error_message": "فشل حجز الموعد. يرجى المحاولة مرة أخرى."
+    "error_message": "حدث خطأ أثناء إرسال طلبك. يرجى المحاولة مرة أخرى."
   }
 }
