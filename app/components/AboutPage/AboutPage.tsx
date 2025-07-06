@@ -35,7 +35,7 @@ const AboutPage = () => {
   const { t } = useTranslation("about");
 
   return (
-    <Box>
+    <Box mt={"xl"}>
       {/* Hero Banner */}
       <BackgroundImage src="/images/about_image.jpg" radius={0} h={500}>
         <Overlay color="#000" opacity={0.4} zIndex={1} />
