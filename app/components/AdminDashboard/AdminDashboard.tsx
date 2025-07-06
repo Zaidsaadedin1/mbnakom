@@ -14,48 +14,29 @@ import {
   TableScrollContainer,
   Skeleton,
   Space,
-  Tooltip,
-  ActionIcon,
-  Modal,
-  Textarea,
 } from "@mantine/core";
-import {
-  IconSearch,
-  IconUser,
-  IconCalendarEvent,
-  IconInfoCircle,
-  IconEdit,
-  IconTrash,
-} from "@tabler/icons-react";
+import { IconSearch, IconUser, IconCalendarEvent } from "@tabler/icons-react";
 import { useTranslation } from "next-i18next";
 import { GetUserDto } from "../../Apis/types/userDtos/userDtos";
 import { GetAppointmentForAdminDto } from "../../Apis/types/appointmentDtos/appointmentDtos";
 import { AppointmentStatus } from "../../Apis/enums/AppointmentStatus";
-import { useDisclosure } from "@mantine/hooks";
 
 type AdminDashboardProps = {
   users: GetUserDto[];
   appointments: GetAppointmentForAdminDto[];
   loading?: boolean;
-  onUpdateAppointment?: (id: number, status: AppointmentStatus) => void;
-  onDeleteAppointment?: (id: number) => void;
 };
 
 function AdminDashboard({
   users = [],
   appointments = [],
   loading = false,
-  onUpdateAppointment,
-  onDeleteAppointment,
 }: AdminDashboardProps) {
   const { t } = useTranslation("adminDashboard");
   const [searchUser, setSearchUser] = React.useState("");
   const [searchAppointment, setSearchAppointment] = React.useState("");
   const [usersPage, setUsersPage] = React.useState(1);
   const [appointmentsPage, setAppointmentsPage] = React.useState(1);
-  const [selectedAppointment, setSelectedAppointment] =
-    React.useState<GetAppointmentForAdminDto | null>(null);
-  const [opened, { open, close }] = useDisclosure(false);
   const itemsPerPage = 5;
 
   // Filter users
@@ -107,23 +88,6 @@ function AdminDashboard({
         new Date(user.dateOfBirth).getMonth() === new Date().getMonth() &&
         new Date(user.dateOfBirth).getFullYear() === new Date().getFullYear()
     ).length,
-  };
-
-  const handleViewDetails = (appointment: GetAppointmentForAdminDto) => {
-    setSelectedAppointment(appointment);
-    open();
-  };
-
-  const handleStatusChange = (id: number, status: AppointmentStatus) => {
-    if (onUpdateAppointment) {
-      onUpdateAppointment(id, status);
-    }
-  };
-
-  const handleDeleteAppointment = (id: number) => {
-    if (onDeleteAppointment) {
-      onDeleteAppointment(id);
-    }
   };
 
   if (loading) {
@@ -267,36 +231,37 @@ function AdminDashboard({
           />
         </Group>
 
-        <TableScrollContainer minWidth={800}>
+        <TableScrollContainer minWidth={1200}>
           <Table striped highlightOnHover>
             <Table.Thead>
               <Table.Tr>
                 <Table.Th>{t("appointments.fields.client")}</Table.Th>
+                <Table.Th>{t("appointments.fields.email")}</Table.Th>
+                <Table.Th>{t("appointments.fields.phone")}</Table.Th>
                 <Table.Th>{t("appointments.fields.service")}</Table.Th>
                 <Table.Th>{t("appointments.fields.propertyType")}</Table.Th>
                 <Table.Th>{t("appointments.fields.date")}</Table.Th>
+                <Table.Th>{t("appointments.fields.time")}</Table.Th>
                 <Table.Th>{t("appointments.fields.status")}</Table.Th>
-                <Table.Th>{t("appointments.fields.actions")}</Table.Th>
+                <Table.Th>{t("appointments.fields.projectDetails")}</Table.Th>
+                <Table.Th>{t("appointments.fields.createdAt")}</Table.Th>
               </Table.Tr>
             </Table.Thead>
             <Table.Tbody>
               {paginatedAppointments.length > 0 ? (
                 paginatedAppointments.map((appointment) => (
                   <Table.Tr key={appointment.id}>
+                    <Table.Td>{`${appointment.firstName} ${appointment.lastName}`}</Table.Td>
+                    <Table.Td>{appointment.email}</Table.Td>
+                    <Table.Td>{appointment.phone}</Table.Td>
                     <Table.Td>
-                      {`${appointment.firstName} ${appointment.lastName}`}
-                      <Text size="sm" c="dimmed">
-                        {appointment.email}
-                      </Text>
+                      {t(`services.${appointment.serviceType}`)}
                     </Table.Td>
-                    <Table.Td>{appointment.serviceType}</Table.Td>
                     <Table.Td>{appointment.propertyType || "-"}</Table.Td>
                     <Table.Td>
                       {new Date(appointment.preferredDate).toLocaleDateString()}
-                      <Text size="sm" c="dimmed">
-                        {appointment.preferredTime}
-                      </Text>
                     </Table.Td>
+                    <Table.Td>{appointment.preferredTime}</Table.Td>
                     <Table.Td>
                       <Badge
                         color={
@@ -310,47 +275,15 @@ function AdminDashboard({
                         {t(`status.${appointment.status}`)}
                       </Badge>
                     </Table.Td>
+                    <Table.Td>{appointment.projectDetails}</Table.Td>
                     <Table.Td>
-                      <Group gap="xs">
-                        <Tooltip label={t("appointments.viewDetails")}>
-                          <ActionIcon
-                            variant="subtle"
-                            onClick={() => handleViewDetails(appointment)}
-                          >
-                            <IconInfoCircle size={18} />
-                          </ActionIcon>
-                        </Tooltip>
-                        <Tooltip label={t("appointments.edit")}>
-                          <ActionIcon
-                            variant="subtle"
-                            onClick={() =>
-                              handleStatusChange(
-                                appointment.id,
-                                AppointmentStatus.Confirmed
-                              )
-                            }
-                          >
-                            <IconEdit size={18} />
-                          </ActionIcon>
-                        </Tooltip>
-                        <Tooltip label={t("appointments.delete")}>
-                          <ActionIcon
-                            variant="subtle"
-                            color="red"
-                            onClick={() =>
-                              handleDeleteAppointment(appointment.id)
-                            }
-                          >
-                            <IconTrash size={18} />
-                          </ActionIcon>
-                        </Tooltip>
-                      </Group>
+                      {new Date(appointment.createdAt).toLocaleString()}
                     </Table.Td>
                   </Table.Tr>
                 ))
               ) : (
                 <Table.Tr>
-                  <Table.Td colSpan={6} style={{ textAlign: "center" }}>
+                  <Table.Td colSpan={10} style={{ textAlign: "center" }}>
                     <Text c="dimmed">{t("appointments.noAppointments")}</Text>
                   </Table.Td>
                 </Table.Tr>
@@ -368,83 +301,6 @@ function AdminDashboard({
           boundaries={1}
         />
       </Paper>
-
-      {/* Appointment Details Modal */}
-      <Modal
-        opened={opened}
-        onClose={close}
-        title={t("appointments.detailsTitle")}
-        size="lg"
-      >
-        {selectedAppointment && (
-          <Stack>
-            <Group>
-              <Text fw={500}>{t("appointments.fields.client")}:</Text>
-              <Text>
-                {selectedAppointment.firstName} {selectedAppointment.lastName}
-              </Text>
-            </Group>
-            <Group>
-              <Text fw={500}>{t("appointments.fields.email")}:</Text>
-              <Text>{selectedAppointment.email}</Text>
-            </Group>
-            <Group>
-              <Text fw={500}>{t("appointments.fields.phone")}:</Text>
-              <Text>{selectedAppointment.phone}</Text>
-            </Group>
-            <Group>
-              <Text fw={500}>{t("appointments.fields.service")}:</Text>
-              <Text>{selectedAppointment.serviceType}</Text>
-            </Group>
-            <Group>
-              <Text fw={500}>{t("appointments.fields.propertyType")}:</Text>
-              <Text>{selectedAppointment.propertyType || "-"}</Text>
-            </Group>
-            <Group>
-              <Text fw={500}>{t("appointments.fields.date")}:</Text>
-              <Text>
-                {new Date(
-                  selectedAppointment.preferredDate
-                ).toLocaleDateString()}
-              </Text>
-            </Group>
-            <Group>
-              <Text fw={500}>{t("appointments.fields.time")}:</Text>
-              <Text>{selectedAppointment.preferredTime}</Text>
-            </Group>
-            <Group>
-              <Text fw={500}>{t("appointments.fields.status")}:</Text>
-              <Badge
-                color={
-                  selectedAppointment.status === AppointmentStatus.Confirmed
-                    ? "green"
-                    : selectedAppointment.status === AppointmentStatus.Pending
-                    ? "yellow"
-                    : "red"
-                }
-              >
-                {t(`status.${selectedAppointment.status}`)}
-              </Badge>
-            </Group>
-            <Group>
-              <Text fw={500}>{t("appointments.fields.projectDetails")}:</Text>
-              <Textarea
-                value={selectedAppointment.projectDetails}
-                readOnly
-                autosize
-                minRows={3}
-                maxRows={6}
-              />
-            </Group>
-            <Group>
-              <Text fw={500}>{t("appointments.fields.createdAt")}:</Text>
-              <Text>
-                {new Date(selectedAppointment.createdAt).toLocaleString()}
-              </Text>
-            </Group>
-          </Stack>
-        )}
-      </Modal>
     </Stack>
   );
 }

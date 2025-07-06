@@ -71,7 +71,7 @@ const MenuComponent = () => {
     { path: null, icon: IconLogout, label: t("logout"), action: logout },
   ];
   return (
-    <AppShell header={{ height: 80 }} padding="md" mb={"xl"}>
+    <AppShell header={{ height: 80 }} padding="md" mb={"30px"}>
       <AppShell.Header
         style={{
           backgroundColor: isDark ? theme.colors.dark[7] : theme.white,

@@ -42,5 +42,13 @@
     "Pending": "Pending",
     "Confirmed": "Confirmed",
     "Cancelled": "Cancelled"
+  },
+  "services": {
+    "kitchen_renovation": "Kitchen Renovation",
+    "bathroom_remodeling": "Bathroom Remodeling",
+    "interior_design": "Interior Design",
+    "painting_services": "Painting Services",
+    "commercial_renovation": "Commercial Renovation",
+    "general_contracting": "General Contracting"
   }
 }
