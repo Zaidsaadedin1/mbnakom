@@ -37,7 +37,7 @@ const AboutPage = () => {
   return (
     <Box>
       {/* Hero Banner */}
-      <BackgroundImage src="/images/about_image.jpg" radius={0} h={400}>
+      <BackgroundImage src="/images/about_image.jpg" radius={0} h={500}>
         <Overlay color="#000" opacity={0.4} zIndex={1} />
         <Container size="lg" h="100%">
           <Stack

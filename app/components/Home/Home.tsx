@@ -340,7 +340,7 @@ export const HomePage = () => {
               size="xl"
               variant="white"
               leftSection={<IconCalendar size={24} />}
-              onClick={() => router.push(`/${currentLang}/contact`)}
+              onClick={() => router.push(`/${currentLang}/appointments`)}
             >
               {t("request_quote")}
             </Button>
