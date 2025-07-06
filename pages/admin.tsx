@@ -6,7 +6,7 @@ import Admin from "../app/components/Admin/Admin";
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? "en", [
+      ...(await serverSideTranslations(locale ?? "ar", [
         "admin",
         "menuComponent",
         "footer",

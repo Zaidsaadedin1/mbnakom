@@ -30,7 +30,7 @@ const UnAuthorized = () => {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? "en", [
+      ...(await serverSideTranslations(locale ?? "ar", [
         "common",
         "menuComponent",
         "footer",

@@ -34,9 +34,6 @@
   "buttons": {
     "edit": "Save Changes"
   },
-  "appointments": {
-    "title": "Your Appointments"
-  },
   "table": {
     "id": "ID",
     "firstName": "First Name",
@@ -72,5 +69,29 @@
     "Completed": "Completed",
     "Cancelled": "Cancelled",
     "NoShow": "No Show"
+  },
+  "appointments": {
+    "title": "My Appointments",
+    "details_title": "Appointment Details",
+    "no_appointments": "No appointments found.",
+    "fields": {
+      "id": "ID",
+      "service": "Service",
+      "propertyType": "Property Type",
+      "date": "Preferred Date",
+      "time": "Preferred Time",
+      "status": "Status",
+      "actions": "Actions",
+      "projectDetails": "Project Details",
+      "createdAt": "Created At"
+    },
+    "services": {
+      "kitchen_renovation": "Kitchen Renovation",
+      "bathroom_remodeling": "Bathroom Remodeling",
+      "interior_design": "Interior Design",
+      "painting_services": "Painting Services",
+      "commercial_renovation": "Commercial Renovation",
+      "general_contracting": "General Contracting"
+    }
   }
 }

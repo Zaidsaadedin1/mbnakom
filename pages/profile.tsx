@@ -4,10 +4,11 @@ import Profile from "../app/components/Profile/Profile";
 import { checkAuth } from "../checkIsAuthMiddleware";
 import userController from "../app/Apis/controllers/userController";
 import i18nConfig from "../next-i18next.config";
+import appointmentController from "../app/Apis/controllers/appointmentControllers";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { locale } = context;
-  console.log(context);
+
   const authCheck = await checkAuth(context);
 
   if (!authCheck.authenticated) {
@@ -19,6 +20,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     };
   }
   const user = (await userController.getUserById(authCheck.user?.id)).data;
+  const userAppointments = (
+    await appointmentController.GetAllUserAppointmentAsync(authCheck.user!.id)
+  ).data;
+
   return {
     props: {
       ...(await serverSideTranslations(locale || "ar", [
@@ -27,6 +32,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         "footer",
       ])),
       user,
+      userAppointments,
     },
   };
 };

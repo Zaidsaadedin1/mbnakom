@@ -51,10 +51,8 @@ const MenuComponent = () => {
 
   const authItems = [
     { path: "/profile", icon: IconUser, label: t("profile") },
-    { path: "/login", icon: IconLogin, label: t("login"), action: null },
     { path: null, icon: IconLogout, label: t("logout"), action: logout },
   ];
-
   return (
     <AppShell header={{ height: 80 }} padding="md" mb={"xl"}>
       <AppShell.Header
@@ -73,12 +71,12 @@ const MenuComponent = () => {
         >
           {/* Logo - Always visible */}
           <Image
-            src={"images/transperent-logo.png"}
+            src="/images/transperent-logo.png"
             alt="Logo"
-            width={80}
-            height={80}
-            onClick={() => router.push(`/${currentLang}/`)}
+            w={70}
+            h={70}
             style={{ cursor: "pointer" }}
+            onClick={() => router.push(`/`)}
           />
 
           {/* Desktop Navigation - Hidden on mobile */}

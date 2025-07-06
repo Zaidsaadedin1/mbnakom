@@ -7,9 +7,9 @@ export enum AppointmentStatus {
 }
 
 export const statusColors: Record<string, string> = {
-  confirmed: "green",
-  completed: "blue",
-  cancelled: "red",
-  pending: "yellow",
-  noshow: "gray",
+  Confirmed: "green",
+  Completed: "blue",
+  Cancelled: "red",
+  Pending: "yellow",
+  NoShow: "gray",
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, Button } from "@mantine/core";
 import { IconLanguage } from "@tabler/icons-react";
 import { useRouter } from "next/router";
@@ -9,9 +9,15 @@ export default function LanguageSwitcher() {
   const { locale, pathname, query } = router;
   const { t } = useTranslation("common");
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const languages = [
     { code: "en", label: t("common:English") },
-    { code: "ar", label: t("Arabic") },
+    { code: "ar", label: t("common:Arabic") },
   ];
 
   const changeLocale = (newLocale: string) => {
@@ -20,6 +26,9 @@ export default function LanguageSwitcher() {
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/`;
     router.push({ pathname, query }, undefined, { locale: newLocale });
   };
+
+  // Prevent hydration mismatch by deferring rendering until after mount
+  if (!mounted) return null;
 
   return (
     <Menu shadow="md" width={200}>

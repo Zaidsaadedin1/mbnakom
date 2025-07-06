@@ -34,9 +34,6 @@
   "buttons": {
     "edit": "حفظ التغييرات"
   },
-  "appointments": {
-    "title": "مواعيدك"
-  },
   "table": {
     "id": "الرقم",
     "firstName": "الاسم الأول",
@@ -72,5 +69,30 @@
     "Completed": "مكتمل",
     "Cancelled": "ملغى",
     "NoShow": "لم يحضر"
+  },
+
+  "appointments": {
+    "title": "مواعيدي",
+    "details_title": "تفاصيل الموعد",
+    "no_appointments": "لا توجد مواعيد.",
+    "fields": {
+      "id": "رقم",
+      "service": "الخدمة",
+      "propertyType": "نوع العقار",
+      "date": "التاريخ المفضل",
+      "time": "الوقت المفضل",
+      "status": "الحالة",
+      "actions": "الإجراءات",
+      "projectDetails": "تفاصيل المشروع",
+      "createdAt": "تاريخ الإنشاء"
+    },
+    "services": {
+      "kitchen_renovation": "ترميم المطابخ",
+      "bathroom_remodeling": "تجديد الحمامات",
+      "interior_design": "التصميم الداخلي",
+      "painting_services": "خدمات الدهان",
+      "commercial_renovation": "ترميم تجاري",
+      "general_contracting": "مقاول عام"
+    }
   }
 }
