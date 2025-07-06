@@ -50,7 +50,24 @@ const MenuComponent = () => {
   ];
 
   const authItems = [
-    { path: "/profile", icon: IconUser, label: t("profile") },
+    ...(user?.Roles?.includes("User")
+      ? [
+          {
+            path: "/profile",
+            icon: IconUser,
+            label: t("profile"),
+          },
+        ]
+      : []),
+    ...(user?.Roles?.includes("Admin")
+      ? [
+          {
+            path: "/adminDashboard",
+            icon: IconUser,
+            label: t("adminDashboard"),
+          },
+        ]
+      : []),
     { path: null, icon: IconLogout, label: t("logout"), action: logout },
   ];
   return (
